@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetrotranzTest", "PetrotranzTest\PetrotranzTest.csproj", "{2C19E973-F828-4D59-9E64-5F0E457FAD0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetrotranzUnitTest", "PetrotranzUnitTest\PetrotranzUnitTest.csproj", "{A6402B73-CADD-454A-8BBA-A0D3152FC86D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C19E973-F828-4D59-9E64-5F0E457FAD0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C19E973-F828-4D59-9E64-5F0E457FAD0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C19E973-F828-4D59-9E64-5F0E457FAD0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C19E973-F828-4D59-9E64-5F0E457FAD0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6402B73-CADD-454A-8BBA-A0D3152FC86D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6402B73-CADD-454A-8BBA-A0D3152FC86D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6402B73-CADD-454A-8BBA-A0D3152FC86D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6402B73-CADD-454A-8BBA-A0D3152FC86D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {459896D4-DB96-4A2D-9F3D-F77271B9CB4B}
+	EndGlobalSection
+EndGlobal
