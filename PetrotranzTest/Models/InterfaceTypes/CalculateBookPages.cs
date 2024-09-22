@@ -9,6 +9,7 @@ namespace PetrotranzTest.Models.InterfaceTypes
 {
     public class CalculateBookPages : ICalculateBookPages
     {
+        /// <inheritdoc/>
         public double Calculate(int totalWords, int wordsPerPage)
         {
             return Math.Ceiling((double)totalWords / wordsPerPage);

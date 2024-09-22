@@ -15,9 +15,9 @@ namespace PetrotranzTest.Models.Personas
             _book = book;
         }
 
-        public double? CalculateBookPages(int totalWords, int wordsPerPage)
+        public double CalculateBookPages(int totalWords, int wordsPerPage)
         {
-            return _book?.CalculateBookPages?.Calculate(totalWords, wordsPerPage);
+            return _book.CalculateBookPages?.Calculate(totalWords, wordsPerPage) ?? throw new Exception();
         }
     }
 }

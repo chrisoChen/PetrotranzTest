@@ -34,5 +34,19 @@ namespace PetrotranzUnitTest
             Assert.AreEqual(expectedPages, pages);
         }
 
+        [TestMethod]
+        public void TestStudentCalculateBookStats()
+        {
+            var student = new Student(_studentTextFileBook);
+            string bookPath = Path.Combine(
+                Directory.GetCurrentDirectory(), 
+                "Books", 
+                "A Tale of Two Cities - Charles Dickens.txt");
+
+            student.CalculateBookStats(bookPath);
+
+            Assert.IsTrue(File.Exists(bookPath));
+        }
+
     }
 }

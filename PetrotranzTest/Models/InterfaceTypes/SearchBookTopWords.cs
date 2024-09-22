@@ -16,6 +16,7 @@ namespace PetrotranzTest.Models.InterfaceTypes
             _maxWords = maxWords;
         }
 
+        /// <inheritdoc/>
         public List<string> Search(string bookPath)
         {
             return new List<string>();

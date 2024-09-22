@@ -9,6 +9,7 @@ namespace PetrotranzTest.Models.InterfaceTypes
 {
     public class CalculateBookStats : ICalculateBookStats
     {
+        /// <inheritdoc/>
         public (int totalWords, int totalCharacters) Calculate(string bookPath)
         {
             return (0, 0);

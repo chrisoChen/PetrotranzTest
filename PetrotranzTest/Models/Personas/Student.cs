@@ -15,14 +15,14 @@ namespace PetrotranzTest.Models.Personas
             _book = book;
         }
 
-        public void CalculateBookStats(string bookPath)
+        public (int totalWords, int totalCharacters)? CalculateBookStats(string bookPath)
         {
-            _book?.CalculateBookStats?.Calculate(bookPath);
+            return _book.CalculateBookStats?.Calculate(bookPath) ?? throw new Exception();
         }
 
-        public void SearchBookTerm(string searchTerm, string path)
+        public int SearchBookTerm(string searchTerm, string path)
         {
-            _book?.SearchBookTerm?.Search(path, searchTerm);
+            return _book.SearchBookTerm?.Search(path, searchTerm) ?? throw new Exception();
         }
     }
 }

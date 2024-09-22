@@ -9,6 +9,7 @@ namespace PetrotranzTest.Models.InterfaceTypes
 {
     public class SearchBookTerm : ISearchBookTerm
     {
+        /// <inheritdoc/>
         public int Search(string term, string bookPath)
         {
             return 0;

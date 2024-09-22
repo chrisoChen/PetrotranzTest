@@ -15,9 +15,9 @@ namespace PetrotranzTest.Models.Personas
             _book = book;
         }
 
-        public void SearchBookTopWords(string path)
+        public List<string> SearchBookTopWords(string path)
         {
-            _book?.SearchBookTopWords?.Search(path);
+            return _book.SearchBookTopWords?.Search(path) ?? throw new Exception();
         }
     }
 }
