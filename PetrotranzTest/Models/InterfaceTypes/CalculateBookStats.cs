@@ -9,10 +9,20 @@ namespace PetrotranzTest.Models.InterfaceTypes
 {
     public class CalculateBookStats : ICalculateBookStats
     {
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public (int totalWords, int totalCharacters) Calculate(string bookPath)
         {
-            return (0, 0);
+            string book = File.ReadAllText(bookPath);
+            
+            // Remove whitespace and extra characters
+            book = book.Replace("\r", " ").Replace("\n", " ");
+            string[] words = book.Split(" ", StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+            string joinedWords = String.Join("", words);
+
+            int totalWords = words.Length;
+            int totalCharacters = joinedWords.Length;
+
+            return (totalWords, totalCharacters);
         }
     }
 

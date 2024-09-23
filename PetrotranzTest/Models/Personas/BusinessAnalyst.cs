@@ -8,16 +8,16 @@ namespace PetrotranzTest.Models.Personas
 {
     public class BusinessAnalyst
     {
-        private readonly Book _book;
+        public Book Book { get; set; }
 
         public BusinessAnalyst(Book book)
         {
-            _book = book;
+            Book = book;
         }
 
         public List<string> SearchBookTopWords(string path)
         {
-            return _book.SearchBookTopWords?.Search(path) ?? throw new Exception();
+            return Book.SearchBookTopWords?.Search(path) ?? throw new NullReferenceException();
         }
     }
 }

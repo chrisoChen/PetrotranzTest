@@ -8,21 +8,21 @@ namespace PetrotranzTest.Models.Personas
 {
     public class Student
     {
-        private readonly Book _book;
+        public Book Book { get; set; }
 
         public Student(Book book)
         {
-            _book = book;
+            Book = book;
         }
 
-        public (int totalWords, int totalCharacters)? CalculateBookStats(string bookPath)
+        public (int totalWords, int totalCharacters) CalculateBookStats(string bookPath)
         {
-            return _book.CalculateBookStats?.Calculate(bookPath) ?? throw new Exception();
+            return Book.CalculateBookStats?.Calculate(bookPath) ?? throw new NullReferenceException();
         }
 
         public int SearchBookTerm(string searchTerm, string path)
         {
-            return _book.SearchBookTerm?.Search(path, searchTerm) ?? throw new Exception();
+            return Book.SearchBookTerm?.Search(searchTerm, path) ?? throw new NullReferenceException();
         }
     }
 }

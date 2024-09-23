@@ -8,16 +8,16 @@ namespace PetrotranzTest.Models.Personas
 {
     public class Librarian
     {
-        private readonly Book _book;
+        public Book Book { get; set; }
 
         public Librarian(Book book)
         {
-            _book = book;
+            Book = book;
         }
 
         public double CalculateBookPages(int totalWords, int wordsPerPage)
         {
-            return _book.CalculateBookPages?.Calculate(totalWords, wordsPerPage) ?? throw new Exception();
+            return Book.CalculateBookPages?.Calculate(totalWords, wordsPerPage) ?? throw new NullReferenceException();
         }
     }
 }

@@ -3,16 +3,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace PetrotranzTest.Models.InterfaceTypes
 {
     public class SearchBookTerm : ISearchBookTerm
     {
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public int Search(string term, string bookPath)
         {
-            return 0;
+            string book = File.ReadAllText(bookPath);
+
+            string pattern = term;
+
+            MatchCollection matches = Regex.Matches(book, pattern, RegexOptions.IgnoreCase);
+            return matches.Count;
         }
     }
 }

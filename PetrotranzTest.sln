@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35222.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetrotranzTest", "PetrotranzTest\PetrotranzTest.csproj", "{2C19E973-F828-4D59-9E64-5F0E457FAD0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PetrotranzUnitTest", "PetrotranzUnitTest\PetrotranzUnitTest.csproj", "{A6402B73-CADD-454A-8BBA-A0D3152FC86D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PetrotranzUnitTest", "PetrotranzUnitTest\PetrotranzUnitTest.csproj", "{A6402B73-CADD-454A-8BBA-A0D3152FC86D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
