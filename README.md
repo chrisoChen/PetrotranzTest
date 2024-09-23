@@ -17,4 +17,4 @@ Results are printed to standard output in `PetrotranzUnitTest` and can be viewed
 ## Instructions to Run Locally
 Project solution was meant to be loaded inside Visual Studio.
 
-Run all or individual unit tests in `PetrotranzUnitTest`.
+Run all or individual unit tests in `PetrotranzUnitTest` using the test explorer after building the solution.
