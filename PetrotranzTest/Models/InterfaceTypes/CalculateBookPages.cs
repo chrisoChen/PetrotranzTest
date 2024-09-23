@@ -12,6 +12,11 @@ namespace PetrotranzTest.Models.InterfaceTypes
         /// <inheritdoc />
         public double Calculate(int totalWords, int wordsPerPage)
         {
+            if (wordsPerPage == 0)
+            {
+                throw new DivideByZeroException("Words per page cannot be zero.");
+            }
+
             return Math.Ceiling((double)totalWords / wordsPerPage);
         }
     }

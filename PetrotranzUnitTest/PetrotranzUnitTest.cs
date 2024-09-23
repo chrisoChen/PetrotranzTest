@@ -22,7 +22,7 @@ namespace PetrotranzUnitTest
         }
 
         [TestMethod]
-        public void TestLibrarianSearchBookTopWords()
+        public void TestLibrarianCalculateBookPages()
         {
             var librarian = new Librarian(_librarianTextFileBook);
             int totalWords = 50000;
@@ -33,6 +33,24 @@ namespace PetrotranzUnitTest
 
             librarian.Book.Display($"Total Pages: {pages}");
             Assert.AreEqual(expectedPages, pages);
+        }
+
+        [TestMethod]
+        public void TestLibrarianCalculateBookPagesZeroWordsPerPage()
+        {
+            var librarian = new Librarian(_librarianTextFileBook);
+            int totalWords = 50000;
+            int wordsPerPage = 0;
+
+            try
+            {
+                double? pages = librarian.CalculateBookPages(totalWords, wordsPerPage);
+            }
+            catch (DivideByZeroException ex)
+            {
+                librarian.Book.Display(ex.Message);
+                Assert.IsTrue(ex.Message.Equals("Words per page cannot be zero."));
+            }
         }
 
         [TestMethod]
